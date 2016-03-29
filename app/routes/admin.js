@@ -12,6 +12,16 @@ export default Ember.Route.extend({
       this.transitionTo('admin');
     },
 
+    update(story, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          story.set(key,params[key]);
+        }
+      });
+      story.save();
+      this.transitionTo('admin');
+    },
+
     destroyStory(story) {
       story.destroyRecord();
       this.transitionTo('admin');

@@ -1,5 +1,7 @@
 {{#link-to 'story' story.id}}
 <img src={{story.image}} width="300" height="300"/><br>
 {{story.title}}<br>
-By {{story.author}}<br><br><hr>
+By {{story.author}}<br><br>
 {{/link-to}}
+<button {{action 'delete' story}}>Delete</button>
+<hr>

@@ -1,0 +1,7 @@
+<div class="row">
+  {{#each model as |story|}}
+  <div class="col-md-4">
+      {{admin-tile story=story destroyStory="destroyStory"}}
+  </div>
+  {{/each}}
+</div>
